@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E761517B-67BA-4444-A330-94170E9F7B31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myFinalProj</RootNamespace>
+    <AssemblyName>myFinalProj</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\Class1.cs" />
+    <Compile Include="dsCustomerSales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomerSales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsSuppliers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsSuppliers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmOrderAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmOrderAssistance.Designer.cs">
+      <DependentUpon>frmOrderAssistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSaleAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSaleAssistance.Designer.cs">
+      <DependentUpon>frmSaleAssistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportCustomerSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportCustomerSales.Designer.cs">
+      <DependentUpon>frmReportCustomerSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSupplierProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSupplierProduct.Designer.cs">
+      <DependentUpon>frmReportSupplierProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSale.Designer.cs">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSuppliers.Designer.cs">
+      <DependentUpon>frmSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportSupplier.Designer.cs">
+      <DependentUpon>frmReportSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reports\frmReportCustomers.Designer.cs">
+      <DependentUpon>frmReportCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pizzaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pizzaDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UTILITIES\CheckInputUtilities.cs" />
+    <Compile Include="UTILITIES\DisplayUtilities.cs" />
+    <Compile Include="UTILITIES\GeneralUtilities.cs" />
+    <Compile Include="UTILITIES\ValidationsUtilities.cs" />
+    <EmbeddedResource Include="FORMS\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmOrderAssistance.resx">
+      <DependentUpon>frmOrderAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSaleAssistance.resx">
+      <DependentUpon>frmSaleAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\ReportCustumerSale.rdlc" />
+    <EmbeddedResource Include="FORMS\Reports\frmReportCustomerSales.resx">
+      <DependentUpon>frmReportCustomerSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\frmReportSale.resx">
+      <DependentUpon>frmReportSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSuppliers.resx">
+      <DependentUpon>frmSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\frmReportSupplier.resx">
+      <DependentUpon>frmReportSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\frmReportSupplierProduct.resx">
+      <DependentUpon>frmReportSupplierProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\Report1.rdlc" />
+    <EmbeddedResource Include="FORMS\Reports\Report2.rdlc" />
+    <EmbeddedResource Include="FORMS\Reports\frmReportCustomers.resx">
+      <DependentUpon>frmReportCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reports\Report3.rdlc" />
+    <EmbeddedResource Include="FORMS\Reports\Report4.rdlc" />
+    <EmbeddedResource Include="FORMS\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="dsCustomerSales.xsc">
+      <DependentUpon>dsCustomerSales.xsd</DependentUpon>
+    </None>
+    <None Include="dsCustomerSales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomerSales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCustomerSales.xss">
+      <DependentUpon>dsCustomerSales.xsd</DependentUpon>
+    </None>
+    <None Include="DsSuppliers.xsc">
+      <DependentUpon>DsSuppliers.xsd</DependentUpon>
+    </None>
+    <None Include="DsSuppliers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsSuppliers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsSuppliers.xss">
+      <DependentUpon>DsSuppliers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="pizzaDB.xsc">
+      <DependentUpon>pizzaDB.xsd</DependentUpon>
+    </None>
+    <None Include="pizzaDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pizzaDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="pizzaDB.xss">
+      <DependentUpon>pizzaDB.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet.xsc">
+      <DependentUpon>PizzaDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PizzaDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PizzaDbDataSet.xss">
+      <DependentUpon>PizzaDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet1.xsc">
+      <DependentUpon>PizzaDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PizzaDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PizzaDbDataSet1.xss">
+      <DependentUpon>PizzaDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet2.xsc">
+      <DependentUpon>PizzaDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PizzaDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PizzaDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PizzaDbDataSet2.xss">
+      <DependentUpon>PizzaDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
